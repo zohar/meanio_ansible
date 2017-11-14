@@ -8,3 +8,7 @@
 - hosts: meanio_servers
   roles:
   - role: nginxinc.nginx-oss
+
+- hosts: meanio_servers
+  roles:
+  - role: geerlingguy.nodejs
