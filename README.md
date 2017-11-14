@@ -1,1 +1,1 @@
-Ansible playbooks for installing the Mean.io
+Ansible playbooks for the Mean.io solution 
