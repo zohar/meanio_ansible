@@ -4,6 +4,23 @@
 - hosts: all
   roles:
   - role: common
+
 - hosts: meanio_servers
   roles:
   - role: nginxinc.nginx-oss
+
+- hosts: meanio_servers
+  roles:
+  - role: mongod
+
+- hosts: meanio_servers
+  roles:
+  - role: mongoc
+
+- hosts: meanio_servers
+  roles:
+  - role: mongos
+
+- hosts: meanio_servers
+  tasks:
+  - include: roles/mongod/tasks/shards.yml
