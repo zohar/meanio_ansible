@@ -9,18 +9,18 @@
   roles:
   - role: nginxinc.nginx-oss
 
-- hosts: meanio_servers
+- hosts: mongo_servers
   roles:
   - role: mongod
 
-- hosts: meanio_servers
+- hosts: mongoc_servers
   roles:
   - role: mongoc
 
-- hosts: meanio_servers
+- hosts: mongos_servers
   roles:
   - role: mongos
 
-- hosts: meanio_servers
+- hosts: mongo_servers
   tasks:
   - include: roles/mongod/tasks/shards.yml

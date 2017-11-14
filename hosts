@@ -1,2 +1,18 @@
 [meanio_servers]
 meanio_test ansible_host=212.45.15.173 ansible_user=ubuntu
+
+# the mongo servers need a mongod_port variable set, and they must not conflict.
+[mongo_servers]
+meanio_test ansible_host=212.45.15.173 ansible_user=ubuntu
+
+#The list of servers where replication should happen, by default include all servers
+[replication_servers]
+meanio_test ansible_host=212.45.15.173 ansible_user=ubuntu
+
+#The list of mongodb configuration servers, make sure it is 1 or 3
+[mongoc_servers]
+meanio_test ansible_host=212.45.15.173 ansible_user=ubuntu
+
+#The list of servers where mongos servers would run.
+[mongos_servers]
+meanio_test ansible_host=212.45.15.173 ansible_user=ubuntu
