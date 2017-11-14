@@ -1,0 +1,5 @@
+---
+# For Ubuntu 16.04 we need the python2 for ansible to run at all
+
+- name: install python 2
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)

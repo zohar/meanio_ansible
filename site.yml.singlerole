@@ -1,0 +1,4 @@
+---
+- hosts: meanio_servers
+  roles:
+  - role: meanio
