@@ -20,3 +20,7 @@
 - hosts: meanio_servers
   roles:
   - role: nginx-meanio
+
+- hosts: meanio_servers
+  roles:
+  - role: meanio
