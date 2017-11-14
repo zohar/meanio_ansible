@@ -1,0 +1,11 @@
+---
+# Creates the systemd service file
+
+- name: Put the meanio.service template
+  template:
+    src: meanio.service.j2
+    dest: /etc/systemd/system/meanio.service
+    mode: 0755
+
+- name: systemd daemon-reload
+  systemd: daemon_reload=yes name=meanio state=stopped

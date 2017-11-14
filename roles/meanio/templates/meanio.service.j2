@@ -1,0 +1,10 @@
+[Unit]
+Description=Mean.io
+After=mongod.service
+
+[Service]
+User=root
+ExecStart=/usr/bin/npm start --prefix /opt/mean
+
+[Install]
+WantedBy=multi-user.target

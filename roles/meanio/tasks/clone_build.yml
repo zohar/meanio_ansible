@@ -1,0 +1,10 @@
+---
+# This playbook clones mean.io from git and makes a build
+
+- name: Grab Mean.io to /opt/mean/
+  git:
+    repo: 'https://github.com/linnovate/mean.git'
+    dest: /opt/mean/
+    
+- name: npm install
+  raw: 'npm install --prefix /opt/mean/'

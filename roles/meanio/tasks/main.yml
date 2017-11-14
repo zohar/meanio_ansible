@@ -1,0 +1,6 @@
+---
+# Install the main Mean.io service
+
+- include: clone_build.yml
+- include: create_service.yml
+- include: start_service.yml

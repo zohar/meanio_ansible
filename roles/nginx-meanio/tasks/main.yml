@@ -1,0 +1,16 @@
+---
+# This task sets up the nginx reverse-proxy configuration
+
+- name: Put the template .conf file to the /etc/nginx/conf.d/
+  template:
+    src: mean.conf.j2
+    dest: /etc/nginx/conf.d/mean.conf
+    mode: 0644
+
+- name: remove the default.conf
+  file:
+    path: /etc/nginx/conf.d/default.conf
+    state: absent
+
+- name: restart Nginx
+  systemd: state=restarted name=nginx

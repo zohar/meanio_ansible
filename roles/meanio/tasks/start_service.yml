@@ -1,0 +1,8 @@
+---
+# Ensures that meanio service is in started state
+
+- name: Start Mean.io systemd service
+  systemd:
+    name: meanio
+    state: started
+    enabled: yes
