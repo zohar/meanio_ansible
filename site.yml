@@ -1,0 +1,9 @@
+---
+# This Playbook would deploy the Mean.io 
+
+- hosts: all
+  roles:
+  - role: common
+- hosts: meanio_servers
+  roles:
+  - role: nginxinc.nginx-oss
