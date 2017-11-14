@@ -1,1 +1,1 @@
-Ansible playbooks for the Mean.io solution 
+Ansible bundle for the Mean.io solution 
