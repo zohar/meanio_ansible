@@ -16,4 +16,6 @@
 - name: Install mongo
   become: yes
   apt: name=mongodb-org state=latest update_cache=yes
-
+- name: Start mongo
+  become: yes
+  systemd: state=started enabled=yes name=mongod
