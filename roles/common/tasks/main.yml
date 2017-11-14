@@ -1,0 +1,19 @@
+# Install mongodb 
+---
+- name: Add mongo ppa key
+  become: yes
+  apt_key: >
+    keyserver=hkp://keyserver.ubuntu.com:80
+    id=2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+    state=present
+- name: Add mongo sources list
+  become: yes
+  lineinfile: >
+    line="deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/testing multiverse"
+    dest=/etc/apt/sources.list.d/mongodb-org-3.6.list
+    state=present
+    create=yes
+- name: Install mongo
+  become: yes
+  apt: name=mongodb-org state=latest update_cache=yes
+
