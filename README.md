@@ -1,7 +1,7 @@
-#### Ansible bundle for the Mean.io solution 
+### Ansible bundle for the Mean.io solution 
 
 
-##### Usage:
+#### Usage:
 
 ```bash
 git clone https://github.com/ktarasyuk/meanio_ansible
