@@ -7,6 +7,5 @@
     dest: /opt/mean/
 
 - name: npm install
-  shell: npm install
-  args:
-    chdir: /opt/mean/
+  npm:
+    path: /opt/mean/
