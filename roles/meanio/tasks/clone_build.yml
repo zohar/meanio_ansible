@@ -7,4 +7,5 @@
     dest: /opt/mean/
     
 - name: npm install
-  raw: 'npm install --prefix /opt/mean/'
+  npm:
+    path: /opt/mean/
