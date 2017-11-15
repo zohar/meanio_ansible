@@ -5,6 +5,10 @@
   roles:
   - role: common
 
+- hosts: meanio_servers_aws
+  roles:
+  - role: kamaln7.swapfile
+
 - hosts: meanio_servers
   roles:
   - role: mongodb

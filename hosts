@@ -1,2 +1,6 @@
 [meanio_servers]
-meanio_test ansible_host=212.45.15.174 ansible_user=ubuntu
+#meanio_test ansible_host=212.45.15.174 ansible_user=ubuntu
+meanio_test_aws ansible_host=34.241.150.181 ansible_user=ubuntu
+
+[meanio_servers_aws]
+meanio_test_aws ansible_host=34.241.150.181 ansible_user=ubuntu
