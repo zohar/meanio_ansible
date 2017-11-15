@@ -5,6 +5,8 @@
   git:
     repo: 'https://github.com/linnovate/mean.git'
     dest: /opt/mean/
-    
+
 - name: npm install
-  raw: 'npm install --prefix /opt/mean/'
+  shell: npm install
+  args:
+    chdir: /opt/mean/
